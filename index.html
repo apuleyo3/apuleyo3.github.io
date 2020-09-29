@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Welcome</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<head lang="es">
+		<title>Welcome</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar w/ text</a>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+	</head>
+	<style>
+		body, body *{font-family: 'Open Sans', sans-serif;}
+		div#main-banner {height: 80vh;background-image: url(/images/vmartinez-folio.jpg);background-size: cover;background-repeat: no-repeat;}
+		div#presentation h1 {font-size: 70px;text-shadow: 1px 1px 3px #333;}
+		div#presentation > * {color: white;margin:auto;}
+		#presentation h4 {letter-spacing: 10px;font-weight: 100;}
+		#presentation .inner-wrapper {border: 1px solid white;}
+		p {font-size: .9rem;line-height: 1.6;}
+		a {color: #ea4c4c;}
+		div#presentation .inner-wrapper {max-width: 560px;}
+		div#main-bio img {max-width: 350px;}
+		div#main-bio .inner-wrapper {max-width: 960px;}
+		h2 {color: #900000;}
+		.btn-outline-danger:focus {box-shadow: none;}
+	</style>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="https://r3t8a3z3.stackpathcdn.com/wp-content/uploads/2020/09/victor-logo.gif" style="max-width:56px;"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">// Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">// About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">// Work</a>
             </li>
           </ul>
-          <span class="navbar-text">
-            Navbar text with an inline element
-          </span>
         </div>
       </nav>
-</body>
+		<div id="main-banner" class="w-100">
+			<div id="presentation" class="w-50 h-100 p-3 d-flex flex-row align-items-center">
+				<div class="inner-wrapper p-3 w-100">
+					<h1><b>Victor Martínez</b></h1>
+					<h4>//Developer</h4>
+					<p class="my-2 py-2">
+						Since 2008, I’ve been working as an IT developer and technical solutions advisor for some companies, and, from 2011 onwards, as an independent contractor. I started building websites, but I always wanted to go beyond... <a href="#">Read more</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="main-wrapper" class="w-100 h-100 pb-5">
+			<div id="main-bio" class="container-fluid p-5 d-flex flex-row align-items-center bg-light">
+				<div class="inner-wrapper p-5 container d-flex ">
+					<div class="p-2 w-50" style="text-align:left;">
+						<img class="img-fluid" src="/images/foto_vic.jpg" />
+					</div>
+					<div class="p-2 w-50">
+						<h2 class="mb-3">// About me</h2>
+						<p>Aim high. These two words, although clichéd, exactly represent what my life has looked like
+	recently. During the last decade, my experiences, goals, and professional dreams have changed radically. To me, aim high has meant going from working alone on my computer at a dimly lighted Starbucks in Mexico City to developing several flight simulators, having an office with a few employees, directing a company respected by many loyal clients, and leading a team of fifty people to transform a decommissioned Boeing 737 into a library for a marginalized neighborhood.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
