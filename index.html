@@ -91,6 +91,9 @@
 		span#overlay-close {position: fixed;right: 20px;top: 10px;background: white;border-radius: 50px;line-height: 1;color: black;cursor: pointer;}
 		div#module-overlay {position: fixed;top: 0;left: 0;background: rgb(255 255 255 / .98);z-index: 100;width: 100%;height: 100%;pointer-events: none;opacity: 0;}
 		.smooth{-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-ms-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
+		.module-wrapper.hidden .module-inner-wrapper {height: 0;overflow: hidden;}
+		span.mod-head {position: relative;cursor: pointer;display: inline-block;width: 100%;}
+		span.mod-head:hover h4 {background: gray;display: inline-block;width: 80%;padding: 5px 10px;border-radius: 0 10px 10px 0;}
 	</style>
 	<body>
 		<nav class="icon-nav">
@@ -171,23 +174,7 @@
 						<img class="img-fluid rounded-circle" src="/images/work2.jpg" />
 					</div>
 				</div>
-			</div>
-			<!-- <div id="article" class="container-fluid p-5 d-flex flex-row align-items-center bg-light row info-wrapper">
-				<div class="inner-wrapper p-5 container d-flex col-8 mx-auto row">
-					<div class="px-5 w-50 row">
-						<img class="img-fluid rounded-circle" src="/images/Colchester-Campus-aerial-shot.jpg" />
-					</div>
-					<div class="p-2 w-50">
-						<h2>// Modules</h2>
-						<div class="col-12 h-auto my-3" style="max-height: 60px;">
-						</div>
-						<p>
-							All the studies I went trough separated by modules of the <b>MSc Computer Science</b> at the <b></b>. To display all the information click on the button below. 
-						</p>
-						<a id="module-widget" type="button" class="btn btn-danger">More info</a>
-					</div>
-				</div>
-			</div> -->
+			</div>s
 			<div id="contact" class="container-fluid p-5 d-flex flex-row align-items-center row info-wrapper bg-light">
 				<div class="inner-wrapper p-5 container d-flex col-8 mx-auto">
 					<div class="p-2 w-50">
@@ -222,21 +209,35 @@
 						<span class="my-3 p-3 essex-logo">
 							<img class="img img-fluid p-4" src="images/essex_logo.png" />
 						</span>
-						<h4 class="my-2 px-2">Module 1</h4>
-						<ul id="left-nav" class="list-group list-group-flush bg-dark">
-							<li class="list-group-item active">Unit 1</li>
-							<li class="list-group-item">Unit 2</li>
-							<li class="list-group-item">Unit 3</li>
-							<li class="list-group-item">Unit 4</li>
-							<li class="list-group-item">Unit 5</li>
-							<li class="list-group-item">Unit 6</li>
-							<li class="list-group-item">Unit 7</li>
-							<li class="list-group-item">Unit 8</li>
-							<li class="list-group-item">Unit 9</li>
-							<li class="list-group-item">Unit 10</li>
-							<li class="list-group-item">Unit 11</li>
-							<li class="list-group-item">Unit 12</li>
-						</ul>
+						<div id="module-1" class="module-wrapper hidden">
+							<span class="mod-head">
+								<h4 class="my-2 px-2 mod-head smooth">Module 1</h4>
+							</span>
+							<div class="module-inner-wrapper">
+								<ul id="left-nav" class="list-group list-group-flush bg-dark">
+									<li class="list-group-item active">Unit 1</li>
+									<li class="list-group-item">Unit 2</li>
+									<li class="list-group-item">Unit 3</li>
+									<li class="list-group-item">Unit 4</li>
+									<li class="list-group-item">Unit 5</li>
+									<li class="list-group-item">Unit 6</li>
+									<li class="list-group-item">Unit 7</li>
+									<li class="list-group-item">Unit 8</li>
+									<li class="list-group-item">Unit 9</li>
+									<li class="list-group-item">Unit 10</li>
+									<li class="list-group-item">Unit 11</li>
+									<li class="list-group-item">Unit 12</li>
+								</ul>
+							</div>
+						</div>
+						<div id="module-2" class="module-wrapper hidden">
+							<span class="mod-head">
+								<h4 class="my-2 px-2 mod-head smooth">Module 2</h4>
+							</span>
+							<div class="module-inner-wrapper">
+								
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="content-block col-10 h-100 d-inline-block text-black pb-5">
