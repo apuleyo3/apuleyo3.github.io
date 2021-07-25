@@ -28,17 +28,29 @@
 						doModule(false);
 					});
 
-					$('#left-nav li.list-group-item').click(function(){
+					$('.lgroup li.list-group-item').click(function(){
 						let idx = parseInt($(this).index()) + 1;
 						let tgt = '#m1-u' + idx;
 
 						$('.module-item').collapse('hide')
 						$(tgt).collapse('show')
 
-						$('#left-nav li.list-group-item').removeClass('active');
+						$('.lgroup li.list-group-item').removeClass('active');
 						$(this).addClass('active')
 
 
+					});
+					
+					$('.mod-wrp').click(function(){
+						let nidx = $(this).attr('data-mod');
+						let elem = '#left-nav-' +  nidx;
+						
+						if($(elem).hasClass('show')){
+							$(elem).collapse('hide')
+						}else{
+							$(elem).collapse('show')
+						}
+						
 					});
 				});
 
@@ -76,7 +88,7 @@
 		.icon-item a {padding: 10px;width: 115px;display: flex;flex-direction: row;margin: 10px 0;pointer-events: all;}
 		.icon-item:hover span.icon-label{width: 122px;opacity: 1;}
 		.info-wrapper {height: 95vh;min-height: 600px;}
-		#left-nav li.list-group-item {background: #343a40;border-color: white;cursor: pointer;}
+		.lgroup li.list-group-item {background: #343a40;border-color: white;cursor: pointer;}
 		ul#left-nav li:hover {background: #121212d4;}
 		.content-block p {color: #333;}
 		.content-block h2 {color: black;}
@@ -91,9 +103,9 @@
 		span#overlay-close {position: fixed;right: 20px;top: 10px;background: white;border-radius: 50px;line-height: 1;color: black;cursor: pointer;}
 		div#module-overlay {position: fixed;top: 0;left: 0;background: rgb(255 255 255 / .98);z-index: 100;width: 100%;height: 100%;pointer-events: none;opacity: 0;}
 		.smooth{-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-ms-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
-		.module-wrapper.hidden .module-inner-wrapper {height: 0;overflow: hidden;}
-		span.mod-head {position: relative;cursor: pointer;display: inline-block;width: 100%;}
-		span.mod-head:hover h4 {background: gray;display: inline-block;width: 80%;padding: 5px 10px;border-radius: 0 10px 10px 0;}
+		/*.module-wrapper.hidden .module-inner-wrapper {height: 0;overflow: hidden;}*/
+		span.mod-head {position: relative;cursor: pointer;display: inline-block;width: 100%;text-align: center;width: 80%;}
+		span.mod-head:hover h4 {background: gray;display: inline-block;width: 80%;padding: 5px 10px;border-radius: 20px;}
 	</style>
 	<body>
 		<nav class="icon-nav">
@@ -123,7 +135,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#work">// Work</a>
             </li>
-			  <li class="nav-item">
+			  <li id="modules" class="nav-item">
               <a class="do-module nav-link" href="#">// Modules</a>
             </li>
 			  <li class="nav-item">
@@ -210,11 +222,11 @@
 							<img class="img img-fluid p-4" src="images/essex_logo.png" />
 						</span>
 						<div id="module-1" class="module-wrapper hidden">
-							<span class="mod-head">
+							<span class="mod-head mod-wrp" data-mod="1">
 								<h4 class="my-2 px-2 mod-head smooth">Module 1</h4>
 							</span>
 							<div class="module-inner-wrapper">
-								<ul id="left-nav" class="list-group list-group-flush bg-dark">
+								<ul id="left-nav-1" class="lgroup list-group list-group-flush bg-dark collapse">
 									<li class="list-group-item active">Unit 1</li>
 									<li class="list-group-item">Unit 2</li>
 									<li class="list-group-item">Unit 3</li>
@@ -231,19 +243,22 @@
 							</div>
 						</div>
 						<div id="module-2" class="module-wrapper hidden">
-							<span class="mod-head">
+							<span class="mod-head mod-wrp" data-mod="2">
 								<h4 class="my-2 px-2 mod-head smooth">Module 2</h4>
 							</span>
 							<div class="module-inner-wrapper">
+								<ul id="left-nav-2" class="lgroup list-group list-group-flush bg-dark collapse">
+
+								</ul>
 								
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="content-block col-10 h-100 d-inline-block text-black pb-5">
-					<div id="module-1" class="module-wrapper col-12 p-5 row">
+					<div id="module-1" class="module-wrapper col-12 px-5 py-2 row">
 						<div class="module-title module-item mb-2 container col-12">
-							<h2><b>Module 1:</b> Launching into Computer Science</h2>
+							<h2><b>LCS_PCOM7E:</b> Launching into Computer Science</h2>
 							<p>
 								The objective of this module is to explore the fundamental theories and practices of computing, and also explore the regulatory and ethical developments of this field, this aimed to to minimise computer technology related threats or possible data breaches. 
 							</p>
@@ -375,6 +390,27 @@
 								<li>Apply aggregate, arithmetic, date and string functions in SQL for summarised reporting.</li>
 								<li>Evaluate query results.</li>
 							</ul>	
+						</div>
+					</div>
+					<div id="module-2" class="module-wrapper col-12 px-5 py-2 row">
+						<div class="module-title module-item mb-2 container col-12">
+							<h2><b>OOIS_PCOM7E:</b> Launching into Computer Science</h2>
+							<p>
+								The objective of this module is to explore the fundamental theories and practices of computing, and also explore the regulatory and ethical developments of this field, this aimed to to minimise computer technology related threats or possible data breaches. 
+							</p>
+						</div>
+						<div id="m1-u1" class="module-item mb-2 container col-12">
+							<h2><b>Unit 1:</b> Introduction to Information Systems</h2>
+							<h5>Learning outcomes</h5>
+							<ul>
+								<li>Understand the core elements of an information system.</li>
+								<li>Appreciate the common issues that can arise when deploying a system.</li>
+								<li>Gain an understanding of the SDLC, its phases and their importance.</li>
+							</ul>
+							<h5>Files</h5>
+							<ul>
+								<li><a href="/files/GDPR Outside of the EU.pdf" target="_blank">GDPR Outside of the EU</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
