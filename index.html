@@ -30,7 +30,7 @@
 
 					$('.lgroup li.list-group-item').click(function(){
 						let idx = parseInt($(this).index()) + 1;
-						let tgt = '#m1-u' + idx;
+						let tgt = '#m2-u' + idx;
 
 						$('.module-item').collapse('hide')
 						$(tgt).collapse('show')
@@ -40,7 +40,7 @@
 
 
 					});
-					
+					/*
 					$('.mod-wrp').click(function(){
 						let nidx = $(this).attr('data-mod');
 						let elem = '#left-nav-' +  nidx;
@@ -51,7 +51,7 @@
 							$(elem).collapse('show')
 						}
 						
-					});
+					});*/
 				});
 
 				function doModule(a = true){
