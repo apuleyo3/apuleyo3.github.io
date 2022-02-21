@@ -41,3 +41,8 @@ div#module-overlay {position: fixed;top: 0;left: 0;background: rgb(255 255 255 /
 span.mod-head {position: relative;cursor: pointer;display: inline-block;width: 100%;text-align: center;width: 80%;}
 span.mod-head:hover h4 {background: gray;display: inline-block;width: 80%;padding: 5px 10px;border-radius: 20px;}
 h6 {color: #911802;font-weight: 600;}
+label {
+    color: gray;
+    font-weight: 600;
+    font-size: 20px;
+}
